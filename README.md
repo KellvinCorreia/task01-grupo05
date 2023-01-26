@@ -224,3 +224,28 @@ https://www.freecodecamp.org/portuguese/news/o-guia-definitivo-para-git-merge-e-
 https://blog.betrybe.com/git/git-rebase/#1
 https://www.atlassian.com/br/git/tutorials/rewriting-history/git-rebase
 https://pt.stackoverflow.com/questions/81221/como-funciona-o-comando-git-rebase
+
+
+## O que é git Revert?
+
+O comando git revert é usado para desfazer alterações no histórico de commits do repositório. A operação de revisão vai pegar o commit especificado, inverter as alterações dele e criar um "commit de reversão" novo.
+
+Primeiro passo é selecionar o commit a ser revertido:
+
+´´´$ git revert <chave-ultimo-commit>´´´
+
+Em seguida o Git abrirá o editor que foi selecionado como padrão para editar o commit de reversão.
+
+Aqui podemos gravar uma mensagem sobre a reversão:
+
+´´´ Revert " Adicionando novos dados " ´´´
+
+Para cancelar a reversão, usamos o seguinte comando;
+
+´´´ $ git revert --abort ´´´
+
+## Referências
+
+https://dev.to/womakerscode/tutorial-git-desfazendo-commits-revert
+https://git-scm.com/docs/git-revert/
+https://www.atlassian.com/br/git/tutorials/
