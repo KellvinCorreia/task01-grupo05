@@ -185,8 +185,39 @@ Assim, como pode notar ao final, os commits ficaram como você disse:
 - master: A, B, C, D, E
 - design: A, B, C, D
 
+<br />
+
+# Git Cherry Pick: o que é e quando usar
+
+O git cherry pick é um comando poderoso do Git que permite ao usuário selecionar **commits** específicos para trazer ao branch desejado.
+
+Quando trabalhamos em equipes em um projeto, é comum haver momentos em que mais de um desenvolvedor trabalha no mesmo código.
+
+Por exemplo, quando o desenvolvedor back-end cria uma estrutura de dados que o front-end também vai utilizar. O desenvolvedor front-end pode usar o git cherry pick para continuar trabalhando no commit que tem o banco de dados, mas da sua maneira.
+![git-cherry-pick](https://geekblogti.wpengine.com/wp-content/uploads/2020/11/git-cherry-pick-imagem-1024x538.png)
+Então para isso, todos os commits tem um ID, algo parecido com “_f13bd3c…_“. É esse identificador que você precisa pegar na branch do seu colega de trabalho para poder copiar ele para a sua.
+
+Os passos são bem simples, primeiro vá para a branch do seu colega
+
+```
+git checkout "Nome da branch do seu amigo"
+```
+
+Encontre o ID do commit dele, você pode fazer isso com o git log.
+
+Só para ilustrar, eu usarei este ID para ficar mais fácil a explicação: “f13bd3c3531f26e805c606729857f39987a2420f”
+
+Volte para a sua branch, e digite
+
+```
+git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
+```
+
+Pronto! Com isso, você copiou apenas o commit que você precisava, sem perder tempo. Por isso é importante trabalhar sempre fazendo pequenos commits.
+
 #### Referências
 
+https://blog.geekhunter.com.br/git-cherry-pick-o-que-e-quando-usar/
 https://docs.github.com/pt/get-started/using-git/about-git-rebase
 https://git-scm.com/docs/git-rebase
 https://www.freecodecamp.org/portuguese/news/o-guia-definitivo-para-git-merge-e-git-rebase/
